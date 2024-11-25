@@ -10,10 +10,10 @@ import UIKit
 
 public struct ThemeColor{
     
-    static let bg: UIColor = .init(hexString: "F5F3F4")
-    static let primary: UIColor = .init(hexString: "1CC9BE")
-    static let secondary: UIColor = .systemOrange
-    static let text: UIColor = .init(hexString: "000000")
-    static let seperator: UIColor = .init(hexString: "CCCCCC")
+    public static let bg: UIColor = .init(hexString: "F5F3F4")
+    public static let primary: UIColor = .init(hexString: "1CC9BE")
+    public static let secondary: UIColor = .systemOrange
+    public static let text: UIColor = .init(hexString: "000000")
+    public static let seperator: UIColor = .init(hexString: "CCCCCC")
     
 }
