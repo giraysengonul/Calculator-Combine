@@ -46,7 +46,7 @@ public final class HomeViewController: UIViewController {
     
     private func setUp(){
         //self
-        view.backgroundColor = .white
+        view.backgroundColor = ThemeColor.bg
     }
     
     private func addConstraint() {
