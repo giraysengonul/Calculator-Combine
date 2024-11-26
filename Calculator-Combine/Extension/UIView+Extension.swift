@@ -24,5 +24,12 @@ extension UIView {
         
     }
     
+    public func addCornerRadius(cornerRadius: CGFloat){
+        
+        layer.masksToBounds = false
+        layer.cornerRadius = cornerRadius
+       
+    }
+    
     
 }
