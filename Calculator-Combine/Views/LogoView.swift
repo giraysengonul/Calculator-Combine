@@ -11,7 +11,7 @@ import SnapKit
 
 public final class LogoView: UIView {
     
-     // MARK: - Properties
+    // MARK: - Properties
     private let logoImageView: UIImageView = {
         let imageView: UIImageView = .init(image: .init(named: "icCalculatorBW"))
         imageView.contentMode = .scaleAspectFit
@@ -54,7 +54,7 @@ public final class LogoView: UIView {
         return hStackView
     }()
     
-     // MARK: - Init
+    // MARK: - Init
     public override init(frame: CGRect) {
         super.init(frame: .zero)
         setUp()
@@ -65,7 +65,7 @@ public final class LogoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-     // MARK: - Properties
+    // MARK: - Properties
     private func setUp(){
         //self
         backgroundColor = .clear

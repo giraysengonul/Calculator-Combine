@@ -10,7 +10,62 @@ import UIKit
 
 public final class ResultView: UIView {
     
-     // MARK: - Init
+    // MARK: - Properties
+    private let headerLabel: UILabel = {
+        LabelFactory.build(
+            text: "Total p/person",
+            font: ThemeFont.demibold(ofSize: 18))
+    }()
+    
+    private let amountPerPersonLabel: UILabel = {
+        let label : UILabel = .init()
+        let text: NSMutableAttributedString = .init(string: "$0", attributes: [.font: ThemeFont.bold(ofSize: 48)])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0,1))
+        label.attributedText = text
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let horizontalLineView: UIView = {
+        let view: UIView = .init()
+        view.backgroundColor = ThemeColor.seperator
+        return view
+    }()
+    
+    
+    private lazy var hStackView: UIStackView = {
+        let hStackView: UIStackView = .init(arrangedSubviews: [
+            AmountView(
+                title: "Total bill",
+                textAlignment: .left),
+            UIView(),
+            AmountView(
+                title: "Total tip",
+                textAlignment: .right),
+        ])
+        hStackView.axis = .horizontal
+        hStackView.distribution = .fillEqually
+        hStackView.spacing = 8
+        hStackView.alignment = .center
+        return hStackView
+    }()
+    
+    private lazy var vStackView: UIStackView = {
+        let vStackView: UIStackView = .init(arrangedSubviews: [
+            
+            headerLabel,
+            amountPerPersonLabel,
+            horizontalLineView,
+            buildspacerView(height: 0),
+            hStackView,
+            
+        ])
+        vStackView.axis = .vertical
+        vStackView.spacing = 8
+        return vStackView
+    }()
+    
+    // MARK: - Init
     public override init(frame: CGRect) {
         super.init(frame: .zero)
         setUp()
@@ -21,13 +76,43 @@ public final class ResultView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-     // MARK: - Properties
+    // MARK: - Helpers
     private func setUp(){
         //self
-        backgroundColor = .blue
+        
+        backgroundColor = .white
+        addShadow(
+            offset: .init(width: 0, height: 3),
+            color: .black,
+            radius: 12.0,
+            opacity: 0.1)
+        
     }
     private func addConstraint() {
         
+        addSubview(vStackView)
+        
+        vStackView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
+            make.top.equalToSuperview().offset(24)
+            make.bottom.equalToSuperview().offset(-24)
+        }
+        
+        horizontalLineView.snp.makeConstraints { make in
+            make.height.equalTo(2)
+        }
+        
+        hStackView.snp.makeConstraints { make in
+            make.height.equalTo(vStackView.snp.height).multipliedBy(0.30)
+        }
+        
+    }
+    
+    private func buildspacerView(height: CGFloat) -> UIView{
+        let view: UIView = UIView()
+        view.heightAnchor.constraint(equalToConstant: height).isActive = true
+        return view
     }
     
 }
