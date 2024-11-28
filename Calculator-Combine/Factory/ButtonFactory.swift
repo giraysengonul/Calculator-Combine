@@ -26,4 +26,15 @@ public struct ButtonFactory{
     }
     
     
+    public static func splitInputViewButton(text: String, corners: CACornerMask) -> UIButton {
+        let button: UIButton = .init(type: .system)
+        button.setTitle(text, for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
+        button.backgroundColor = ThemeColor.primary
+        button.addRoundedCorner(radius: 8.0, corners: corners)
+        return button
+    }
+    
+    
 }
