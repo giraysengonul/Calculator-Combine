@@ -8,10 +8,14 @@
 import Foundation
 import UIKit
 import SnapKit
+import Combine
 
-public final class HomeViewController: UIViewController {
+public final class CalculatorVC: UIViewController {
     
      // MARK: - Properties
+    
+    private let viewModel: CalculatorVM = .init()
+    private var cancellables = Set<AnyCancellable>()
     
     private let logoView: LogoView = LogoView()
     private let resultView: ResultView = ResultView()
@@ -40,9 +44,21 @@ public final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUp()
         addConstraint()
+        bind()
     }
     
      // MARK: - Helpers
+    
+    private func bind(){
+        let input = CalculatorVM.Input(
+            billPublisher: Just(100).eraseToAnyPublisher(),
+            tipPublisher:  Just(.tenPercent).eraseToAnyPublisher(),
+            splitPublisher:  Just(300).eraseToAnyPublisher())
+        let output = viewModel.transform(input: input)
+        output.updateViewPublisher.sink { result in
+            print(">>>>> \(result)")
+        }.store(in: &cancellables)
+    }
     
     private func setUp(){
         //self
