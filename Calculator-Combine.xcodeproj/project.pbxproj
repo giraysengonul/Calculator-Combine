@@ -11,7 +11,8 @@
 		C4501DCB2CF867B200D41FE3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCA2CF867B200D41FE3 /* Result.swift */; };
 		C4501DCD2CF8849B00D41FE3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */; };
 		C4501DCF2CF8926600D41FE3 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */; };
-		C476604A2CF9DB5400A18DC3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47660492CF9DB5400A18DC3 /* Int.swift */; };
+		C476604A2CF9DB5400A18DC3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47660492CF9DB5400A18DC3 /* Int+Extension.swift */; };
+		C476604C2CF9EA1C00A18DC3 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */; };
 		C48F3B982CF5CA6B00063361 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F3B972CF5CA6B00063361 /* AmountView.swift */; };
 		C4ADA7BE2CF72D750014C1F1 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADA7BD2CF72D750014C1F1 /* ButtonFactory.swift */; };
 		C4ADA7C12CF72E460014C1F1 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADA7C02CF72E460014C1F1 /* Tip.swift */; };
@@ -61,7 +62,8 @@
 		C4501DCA2CF867B200D41FE3 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
-		C47660492CF9DB5400A18DC3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		C47660492CF9DB5400A18DC3 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C48F3B972CF5CA6B00063361 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		C4ADA7BD2CF72D750014C1F1 /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 		C4ADA7C02CF72E460014C1F1 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
@@ -253,7 +255,8 @@
 				C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */,
 				C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */,
 				C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */,
-				C47660492CF9DB5400A18DC3 /* Int.swift */,
+				C47660492CF9DB5400A18DC3 /* Int+Extension.swift */,
+				C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -414,7 +417,7 @@
 				C4501DCB2CF867B200D41FE3 /* Result.swift in Sources */,
 				C4C21E7A2CF4669900B0FA86 /* AppDelegate.swift in Sources */,
 				C4C21ED02CF4B69F00B0FA86 /* UIView+Extension.swift in Sources */,
-				C476604A2CF9DB5400A18DC3 /* Int.swift in Sources */,
+				C476604A2CF9DB5400A18DC3 /* Int+Extension.swift in Sources */,
 				C4C21EB22CF472ED00B0FA86 /* LogoView.swift in Sources */,
 				C4C21EC62CF48A0300B0FA86 /* ThemeColor.swift in Sources */,
 				C4ADA7C32CF73C450014C1F1 /* HeaderView.swift in Sources */,
@@ -424,6 +427,7 @@
 				C4ADA7BE2CF72D750014C1F1 /* ButtonFactory.swift in Sources */,
 				C4C21EB62CF4730B00B0FA86 /* BillInputView.swift in Sources */,
 				C4C21EB42CF472F900B0FA86 /* ResultView.swift in Sources */,
+				C476604C2CF9EA1C00A18DC3 /* Double+Extension.swift in Sources */,
 				C4C21E7C2CF4669900B0FA86 /* SceneDelegate.swift in Sources */,
 				C4C21EC82CF48A0C00B0FA86 /* ThemeFont.swift in Sources */,
 				C4C21EAB2CF4678B00B0FA86 /* CalculatorVC.swift in Sources */,
