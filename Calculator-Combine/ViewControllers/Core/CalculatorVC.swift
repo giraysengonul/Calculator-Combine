@@ -50,10 +50,11 @@ public final class CalculatorVC: UIViewController {
      // MARK: - Helpers
     
     private func bind(){
+        
         let input = CalculatorVM.Input(
-            billPublisher: Just(100).eraseToAnyPublisher(),
-            tipPublisher:  Just(.tenPercent).eraseToAnyPublisher(),
-            splitPublisher:  Just(300).eraseToAnyPublisher())
+            billPublisher: billInputView.valuePublisher,
+            tipPublisher:  tipInputView.valuePublisher,
+            splitPublisher:  splitInputView.valuePublisher)
         let output = viewModel.transform(input: input)
         output.updateViewPublisher.sink { result in
             print(">>>>> \(result)")

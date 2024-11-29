@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Combine
+import CombineCocoa
 
 public final class BillInputView: UIView {
     
@@ -53,11 +55,19 @@ public final class BillInputView: UIView {
         return textField
     }()
     
+    private var cancellable: Set<AnyCancellable> = .init()
+    private let billSubject: PassthroughSubject<Double,Never> = .init()
+    public var valuePublisher: AnyPublisher<Double,Never>{
+        return billSubject.eraseToAnyPublisher()
+    }
+    
+    
     // MARK: - Init
     public override init(frame: CGRect) {
         super.init(frame: .zero)
         setUp()
         addConstraint()
+        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -65,6 +75,15 @@ public final class BillInputView: UIView {
     }
     
     // MARK: - Properties
+    
+    private func observe(){
+        
+        textField.textPublisher.sink {[weak self] text in
+            self?.billSubject.send(text?.doubleValue ?? 0)
+        }.store(in: &cancellable)
+        
+    }
+    
     private func setUp(){
         //self
         backgroundColor = .clear
