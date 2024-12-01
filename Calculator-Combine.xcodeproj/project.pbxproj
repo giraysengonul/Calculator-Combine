@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42E99A62CFC408D000CBD2E /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C42E99A52CFC408D000CBD2E /* click.m4a */; };
+		C42E99A92CFC40C5000CBD2E /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E99A82CFC40C5000CBD2E /* AudioPlayerService.swift */; };
+		C4501DC92CF866E300D41FE3 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DC82CF866E300D41FE3 /* CalculatorVM.swift */; };
+		C4501DCB2CF867B200D41FE3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCA2CF867B200D41FE3 /* Result.swift */; };
+		C4501DCD2CF8849B00D41FE3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */; };
+		C4501DCF2CF8926600D41FE3 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */; };
+		C476604A2CF9DB5400A18DC3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47660492CF9DB5400A18DC3 /* Int+Extension.swift */; };
+		C476604C2CF9EA1C00A18DC3 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */; };
 		C48F3B982CF5CA6B00063361 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F3B972CF5CA6B00063361 /* AmountView.swift */; };
 		C4ADA7BE2CF72D750014C1F1 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADA7BD2CF72D750014C1F1 /* ButtonFactory.swift */; };
 		C4ADA7C12CF72E460014C1F1 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADA7C02CF72E460014C1F1 /* Tip.swift */; };
@@ -18,7 +26,7 @@
 		C4C21E912CF4669E00B0FA86 /* Calculator_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E902CF4669E00B0FA86 /* Calculator_CombineTests.swift */; };
 		C4C21E9B2CF4669E00B0FA86 /* Calculator_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */; };
 		C4C21E9D2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */; };
-		C4C21EAB2CF4678B00B0FA86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EAA2CF4678B00B0FA86 /* HomeViewController.swift */; };
+		C4C21EAB2CF4678B00B0FA86 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */; };
 		C4C21EB22CF472ED00B0FA86 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EB12CF472ED00B0FA86 /* LogoView.swift */; };
 		C4C21EB42CF472F900B0FA86 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EB32CF472F900B0FA86 /* ResultView.swift */; };
 		C4C21EB62CF4730B00B0FA86 /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EB52CF4730B00B0FA86 /* BillInputView.swift */; };
@@ -52,6 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C42E99A52CFC408D000CBD2E /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
+		C42E99A82CFC40C5000CBD2E /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
+		C4501DC82CF866E300D41FE3 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
+		C4501DCA2CF867B200D41FE3 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		C47660492CF9DB5400A18DC3 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C48F3B972CF5CA6B00063361 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		C4ADA7BD2CF72D750014C1F1 /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 		C4ADA7C02CF72E460014C1F1 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
@@ -67,7 +83,7 @@
 		C4C21E962CF4669E00B0FA86 /* Calculator-CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator-CombineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITests.swift; sourceTree = "<group>"; };
 		C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C4C21EAA2CF4678B00B0FA86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		C4C21EB12CF472ED00B0FA86 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		C4C21EB32CF472F900B0FA86 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		C4C21EB52CF4730B00B0FA86 /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
@@ -108,10 +124,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42E99A72CFC4099000CBD2E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C42E99A82CFC40C5000CBD2E /* AudioPlayerService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		C4ADA7BF2CF72E3D0014C1F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C4ADA7C02CF72E460014C1F1 /* Tip.swift */,
+				C4501DCA2CF867B200D41FE3 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +164,7 @@
 		C4C21E782CF4669900B0FA86 /* Calculator-Combine */ = {
 			isa = PBXGroup;
 			children = (
+				C42E99A72CFC4099000CBD2E /* Service */,
 				C4ADA7BF2CF72E3D0014C1F1 /* Model */,
 				C4C21ECC2CF48E5D00B0FA86 /* Factory */,
 				C4C21EC92CF48A1100B0FA86 /* Extension */,
@@ -181,6 +207,7 @@
 		C4C21EAC2CF467F800B0FA86 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C42E99A52CFC408D000CBD2E /* click.m4a */,
 				C4C21E822CF4669E00B0FA86 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -213,7 +240,7 @@
 		C4C21EAF2CF4685C00B0FA86 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C4C21EAA2CF4678B00B0FA86 /* HomeViewController.swift */,
+				C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -221,6 +248,7 @@
 		C4C21EB02CF4686700B0FA86 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C4501DC82CF866E300D41FE3 /* CalculatorVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +267,10 @@
 			children = (
 				C4C21ECA2CF48A2000B0FA86 /* UIColor+Extension.swift */,
 				C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */,
+				C4501DCC2CF8849B00D41FE3 /* String+Extension.swift */,
+				C4501DCE2CF8926600D41FE3 /* UIResponder+Extension.swift */,
+				C47660492CF9DB5400A18DC3 /* Int+Extension.swift */,
+				C476604B2CF9EA1C00A18DC3 /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -368,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42E99A62CFC408D000CBD2E /* click.m4a in Resources */,
 				C4C21E832CF4669E00B0FA86 /* Assets.xcassets in Resources */,
 				C4C21E862CF4669E00B0FA86 /* Base in Resources */,
 			);
@@ -396,20 +429,27 @@
 			files = (
 				C48F3B982CF5CA6B00063361 /* AmountView.swift in Sources */,
 				C4ADA7C12CF72E460014C1F1 /* Tip.swift in Sources */,
+				C4501DCB2CF867B200D41FE3 /* Result.swift in Sources */,
 				C4C21E7A2CF4669900B0FA86 /* AppDelegate.swift in Sources */,
 				C4C21ED02CF4B69F00B0FA86 /* UIView+Extension.swift in Sources */,
+				C476604A2CF9DB5400A18DC3 /* Int+Extension.swift in Sources */,
 				C4C21EB22CF472ED00B0FA86 /* LogoView.swift in Sources */,
 				C4C21EC62CF48A0300B0FA86 /* ThemeColor.swift in Sources */,
 				C4ADA7C32CF73C450014C1F1 /* HeaderView.swift in Sources */,
+				C4501DCF2CF8926600D41FE3 /* UIResponder+Extension.swift in Sources */,
+				C4501DCD2CF8849B00D41FE3 /* String+Extension.swift in Sources */,
+				C42E99A92CFC40C5000CBD2E /* AudioPlayerService.swift in Sources */,
 				C4C21ECB2CF48A2000B0FA86 /* UIColor+Extension.swift in Sources */,
 				C4ADA7BE2CF72D750014C1F1 /* ButtonFactory.swift in Sources */,
 				C4C21EB62CF4730B00B0FA86 /* BillInputView.swift in Sources */,
 				C4C21EB42CF472F900B0FA86 /* ResultView.swift in Sources */,
+				C476604C2CF9EA1C00A18DC3 /* Double+Extension.swift in Sources */,
 				C4C21E7C2CF4669900B0FA86 /* SceneDelegate.swift in Sources */,
 				C4C21EC82CF48A0C00B0FA86 /* ThemeFont.swift in Sources */,
-				C4C21EAB2CF4678B00B0FA86 /* HomeViewController.swift in Sources */,
+				C4C21EAB2CF4678B00B0FA86 /* CalculatorVC.swift in Sources */,
 				C4C21ECE2CF48E7600B0FA86 /* LabelFactory.swift in Sources */,
 				C4C21EBA2CF4732B00B0FA86 /* SplitInputView.swift in Sources */,
+				C4501DC92CF866E300D41FE3 /* CalculatorVM.swift in Sources */,
 				C4C21EB82CF4731D00B0FA86 /* TipInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
