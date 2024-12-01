@@ -91,6 +91,9 @@ public final class SplitInputView: UIView {
         
     }
     
+    public func reset(){
+        splitSubject.send(1)
+    }
     
     private func setUp(){
         //self

@@ -10,17 +10,34 @@ import Combine
 
 public final class CalculatorVM{
     
+    // MARK: - Properties
     
     public struct Input{
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void,Never>
     }
     
     public struct Output{
         let updateViewPublisher: AnyPublisher<Result ,Never>
+        let resetCalculatorPublisher: AnyPublisher<Void,Never>
     }
     private var cancellable: Set<AnyCancellable> = .init()
+    
+    private let audioPlayerService: AudioPlayerService
+    
+    // MARK: - Init
+    
+    init(
+        audioPlayerService: AudioPlayerService = DefaultAudioPlayer()
+    ) {
+        
+        self.audioPlayerService = audioPlayerService
+    }
+    
+    // MARK: - Helpers
+    
     
     public func transform(input: Input) -> Output{
         
@@ -39,7 +56,15 @@ public final class CalculatorVM{
                 
             }.eraseToAnyPublisher()
         
-        let output = Output(updateViewPublisher: publishers.eraseToAnyPublisher())
+        let logoViewPublisher = input.logoViewTapPublisher.handleEvents(receiveOutput: { [unowned self] _ in
+            audioPlayerService.playSound()
+        }).flatMap({
+            Just($0)
+        }).eraseToAnyPublisher()
+        
+        
+        let output = Output(updateViewPublisher: publishers.eraseToAnyPublisher(),
+                            resetCalculatorPublisher: logoViewPublisher)
         
         return output
     }

@@ -84,6 +84,11 @@ public final class BillInputView: UIView {
         
     }
     
+    public func reset(){
+        billSubject.send(0.0)
+        textField.text = nil
+    }
+    
     private func setUp(){
         //self
         backgroundColor = .clear

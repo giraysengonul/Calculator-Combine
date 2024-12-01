@@ -130,6 +130,11 @@ public final class TipInputView: UIView {
         
     }
     
+    public func reset(){
+        tipSubject.send(.none)
+    }
+    
+    
     private func resetView(){
         [tenPercentTipButton, fiftenPercentTipButton, twentyPercentTipButton, customButton].forEach {
             $0.backgroundColor = ThemeColor.primary
