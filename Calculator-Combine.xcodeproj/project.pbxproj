@@ -23,7 +23,7 @@
 		C4C21E7C2CF4669900B0FA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E7B2CF4669900B0FA86 /* SceneDelegate.swift */; };
 		C4C21E832CF4669E00B0FA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4C21E822CF4669E00B0FA86 /* Assets.xcassets */; };
 		C4C21E862CF4669E00B0FA86 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4C21E852CF4669E00B0FA86 /* Base */; };
-		C4C21E912CF4669E00B0FA86 /* Calculator_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E902CF4669E00B0FA86 /* Calculator_CombineTests.swift */; };
+		C4C21E912CF4669E00B0FA86 /* CalculatorVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */; };
 		C4C21E9B2CF4669E00B0FA86 /* Calculator_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */; };
 		C4C21E9D2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */; };
 		C4C21EAB2CF4678B00B0FA86 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */; };
@@ -40,6 +40,7 @@
 		C4C21ECB2CF48A2000B0FA86 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21ECA2CF48A2000B0FA86 /* UIColor+Extension.swift */; };
 		C4C21ECE2CF48E7600B0FA86 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21ECD2CF48E7600B0FA86 /* LabelFactory.swift */; };
 		C4C21ED02CF4B69F00B0FA86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */; };
+		C4C558372CFDC9F50058A521 /* MockAudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C558362CFDC9F50058A521 /* MockAudioPlayerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,7 @@
 		C4C21E852CF4669E00B0FA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4C21E872CF4669E00B0FA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C21E8C2CF4669E00B0FA86 /* Calculator-CombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator-CombineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4C21E902CF4669E00B0FA86 /* Calculator_CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineTests.swift; sourceTree = "<group>"; };
+		C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVMTests.swift; sourceTree = "<group>"; };
 		C4C21E962CF4669E00B0FA86 /* Calculator-CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator-CombineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITests.swift; sourceTree = "<group>"; };
 		C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		C4C21ECA2CF48A2000B0FA86 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C4C21ECD2CF48E7600B0FA86 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C4C558362CFDC9F50058A521 /* MockAudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +184,8 @@
 		C4C21E8F2CF4669E00B0FA86 /* Calculator-CombineTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4C21E902CF4669E00B0FA86 /* Calculator_CombineTests.swift */,
+				C4C558352CFDC9B00058A521 /* ViewModel */,
+				C4C558342CFDC9AA0058A521 /* Service */,
 			);
 			path = "Calculator-CombineTests";
 			sourceTree = "<group>";
@@ -282,6 +285,22 @@
 				C4ADA7BD2CF72D750014C1F1 /* ButtonFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		C4C558342CFDC9AA0058A521 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C4C558362CFDC9F50058A521 /* MockAudioPlayerService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C4C558352CFDC9B00058A521 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +477,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4C21E912CF4669E00B0FA86 /* Calculator_CombineTests.swift in Sources */,
+				C4C21E912CF4669E00B0FA86 /* CalculatorVMTests.swift in Sources */,
+				C4C558372CFDC9F50058A521 /* MockAudioPlayerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
