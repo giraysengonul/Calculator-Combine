@@ -41,6 +41,7 @@
 		C4C21ECE2CF48E7600B0FA86 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21ECD2CF48E7600B0FA86 /* LabelFactory.swift */; };
 		C4C21ED02CF4B69F00B0FA86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */; };
 		C4C558372CFDC9F50058A521 /* MockAudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C558362CFDC9F50058A521 /* MockAudioPlayerService.swift */; };
+		C4D18D982D0092EF006470C9 /* Calculator-CombineSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D18D972D0092EF006470C9 /* Calculator-CombineSnapshotTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		C4C21ECD2CF48E7600B0FA86 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		C4C21ECF2CF4B69F00B0FA86 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C4C558362CFDC9F50058A521 /* MockAudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayerService.swift; sourceTree = "<group>"; };
+		C4D18D972D0092EF006470C9 /* Calculator-CombineSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calculator-CombineSnapshotTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		C4C21E8F2CF4669E00B0FA86 /* Calculator-CombineTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4D18D942D008D7E006470C9 /* Snapshot */,
 				C4C558352CFDC9B00058A521 /* ViewModel */,
 				C4C558342CFDC9AA0058A521 /* Service */,
 			);
@@ -301,6 +304,14 @@
 				C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4D18D942D008D7E006470C9 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				C4D18D972D0092EF006470C9 /* Calculator-CombineSnapshotTest.swift */,
+			);
+			path = Snapshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +490,7 @@
 			files = (
 				C4C21E912CF4669E00B0FA86 /* CalculatorVMTests.swift in Sources */,
 				C4C558372CFDC9F50058A521 /* MockAudioPlayerService.swift in Sources */,
+				C4D18D982D0092EF006470C9 /* Calculator-CombineSnapshotTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,9 +728,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.giraysengonul.Calculator-CombineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator-Combine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Calculator-Combine";
 			};
 			name = Debug;
@@ -736,9 +752,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.giraysengonul.Calculator-CombineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator-Combine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Calculator-Combine";
 			};
 			name = Release;
