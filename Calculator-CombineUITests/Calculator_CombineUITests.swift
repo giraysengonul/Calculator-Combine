@@ -8,34 +8,97 @@
 import XCTest
 
 final class Calculator_CombineUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    
+    private var app: XCUIApplication!
+    
+    private var calculatorScreen: CalculatorScreen{
+        CalculatorScreen(app: app)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+    
+    override func setUp() {
+        super.setUp()
+        app = .init()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    override func tearDown() {
+        super.tearDown()
+        app = nil
     }
+    
+    public func testResultViewDefaultValue() throws{
+        
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "$0")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "$0")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "$0")
+        
+    }
+    
+    
+    public func testRegularTip() throws{
+        
+        //User enters a ₺100 bill
+        calculatorScreen.enterBill(amount: 100)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺100")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺100")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺0")
+        
+        //User selects 10%
+        calculatorScreen.selectedTip(tip: .tenPercent)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺110")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺110")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺10")
+        
+        //User selects 15%
+        calculatorScreen.selectedTip(tip: .fifteenPercent)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺115")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺115")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺15")
+        
+        //User selects 20%
+        calculatorScreen.selectedTip(tip: .twentyPercent)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺120")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺120")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺20")
+        
+        //User splits the bill by 4
+        calculatorScreen.selectIncreamentButton(numberOfTaps: 3)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺30")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺120")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺20")
+        
+        //User splits the bill by 4
+        calculatorScreen.selectDecrementButton(numberOfTaps: 2)
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺60")
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺120")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺20")
+        
+    }
+    
+    public func testCustomTipAndSplitBillBy2() throws{
+        
+        calculatorScreen.enterBill(amount: 300)
+        calculatorScreen.selectedTip(tip: .custom(200))
+        calculatorScreen.selectIncreamentButton(numberOfTaps: 1)
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺500")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺200")
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺250")
+    }
+    
+    public func testresetButton(){
+        
+        calculatorScreen.enterBill(amount: 300)
+        calculatorScreen.selectedTip(tip: .custom(200))
+        calculatorScreen.selectIncreamentButton(numberOfTaps: 1)
+        calculatorScreen.doubleTapLogoView()
+        XCTAssertEqual(calculatorScreen.totalBillValueLabel.label, "₺0")
+        XCTAssertEqual(calculatorScreen.totalTipValueLabel.label, "₺0")
+        XCTAssertEqual(calculatorScreen.totalAmountPerPersonValueLabel.label, "₺0")
+        XCTAssertEqual(calculatorScreen.billInputViewTextField.label, "")
+        XCTAssertEqual(calculatorScreen.quantityValueLabel.label, "1")
+        XCTAssertEqual(calculatorScreen.customTipButton.label, "Custom tip")
+    }
+    
+    
+    
 }

@@ -69,6 +69,7 @@ public final class LogoView: UIView {
     private func setUp(){
         //self
         backgroundColor = .clear
+        accessibilityIdentifier = ScreenIdentifier.LogoView.logoView.rawValue
         
     }
     private func addConstraint() {

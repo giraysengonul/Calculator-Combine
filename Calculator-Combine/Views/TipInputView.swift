@@ -25,6 +25,7 @@ public final class TipInputView: UIView {
         button.tapPublisher.flatMap { _ in
             Just(Tip.tenPercent).eraseToAnyPublisher()
         }.assign(to: \.value, on: tipSubject).store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.tenPercentButton.rawValue
         return button
     }()
     
@@ -33,6 +34,7 @@ public final class TipInputView: UIView {
         button.tapPublisher.flatMap { _ in
             Just(Tip.fifteenPercent).eraseToAnyPublisher()
         }.assign(to: \.value, on: tipSubject).store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.fiftenPercentButton.rawValue
         return button
     }()
     
@@ -41,6 +43,7 @@ public final class TipInputView: UIView {
         button.tapPublisher.flatMap { _ in
             Just(Tip.twentyPercent).eraseToAnyPublisher()
         }.assign(to: \.value, on: tipSubject).store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.twentyPercentButton.rawValue
         return button
     }()
     
@@ -66,6 +69,7 @@ public final class TipInputView: UIView {
         button.tapPublisher.sink { [weak self] _ in
             self?.handleCustomButton()
         }.store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipButton.rawValue
         return button
     }()
     
@@ -155,6 +159,7 @@ public final class TipInputView: UIView {
                 textField.placeholder = "Make it generous!"
                 textField.keyboardType = .decimalPad
                 textField.autocorrectionType = .no
+                textField.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue
             }
             let cancelAction = UIAlertAction(
                 title: "Cancel",

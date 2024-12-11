@@ -31,6 +31,7 @@ public final class SplitInputView: UIView {
             
         }.assign(to: \.value, on: splitSubject)
             .store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
         return button
     }()
     
@@ -42,6 +43,7 @@ public final class SplitInputView: UIView {
             Just(splitSubject.value + 1)
         }.assign(to: \.value, on: splitSubject)
             .store(in: &cancellable)
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.incrementButton.rawValue
         return button
     }()
     
@@ -50,6 +52,7 @@ public final class SplitInputView: UIView {
             text: "1",
             font: ThemeFont.bold(ofSize: 20))
         label.backgroundColor = .white
+        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue
         return label
     }()
     

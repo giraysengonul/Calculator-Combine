@@ -14,6 +14,7 @@ public final class AmountView: UIView {
     
     private let title: String
     private let textAlignment: NSTextAlignment
+    private let amountLabelIdentifier: String
     
     private lazy var titleLabel: UILabel = {
         LabelFactory.build(
@@ -32,6 +33,7 @@ public final class AmountView: UIView {
             attributes: [.font: ThemeFont.bold(ofSize: 24)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
         label.attributedText = text
+        label.accessibilityIdentifier = amountLabelIdentifier
         return label
     }()
     
@@ -46,9 +48,10 @@ public final class AmountView: UIView {
     
     // MARK: - Init
     
-    public init(title: String, textAlignment: NSTextAlignment) {
+    public init(title: String, textAlignment: NSTextAlignment, amountLabelIdentifier: String) {
         self.title = title
         self.textAlignment = textAlignment
+        self.amountLabelIdentifier = amountLabelIdentifier
         super.init(frame: .zero)
         setUp()
         addConstraint()

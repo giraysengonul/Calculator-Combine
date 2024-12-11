@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C400EEBA2D0569570018B4D5 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400EEB92D0569570018B4D5 /* ScreenIdentifier.swift */; };
+		C400EEBC2D056AD40018B4D5 /* CalculatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400EEBB2D056AD40018B4D5 /* CalculatorScreen.swift */; };
+		C400EEC62D0571370018B4D5 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C400EEC52D0571370018B4D5 /* CombineCocoa */; };
+		C400EEC72D0572180018B4D5 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400EEB92D0569570018B4D5 /* ScreenIdentifier.swift */; };
 		C42E99A62CFC408D000CBD2E /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C42E99A52CFC408D000CBD2E /* click.m4a */; };
 		C42E99A92CFC40C5000CBD2E /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E99A82CFC40C5000CBD2E /* AudioPlayerService.swift */; };
 		C4501DC92CF866E300D41FE3 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501DC82CF866E300D41FE3 /* CalculatorVM.swift */; };
@@ -25,7 +29,6 @@
 		C4C21E862CF4669E00B0FA86 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4C21E852CF4669E00B0FA86 /* Base */; };
 		C4C21E912CF4669E00B0FA86 /* CalculatorVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */; };
 		C4C21E9B2CF4669E00B0FA86 /* Calculator_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */; };
-		C4C21E9D2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */; };
 		C4C21EAB2CF4678B00B0FA86 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */; };
 		C4C21EB22CF472ED00B0FA86 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EB12CF472ED00B0FA86 /* LogoView.swift */; };
 		C4C21EB42CF472F900B0FA86 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C21EB32CF472F900B0FA86 /* ResultView.swift */; };
@@ -62,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C400EEB92D0569570018B4D5 /* ScreenIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIdentifier.swift; sourceTree = "<group>"; };
+		C400EEBB2D056AD40018B4D5 /* CalculatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorScreen.swift; sourceTree = "<group>"; };
 		C42E99A52CFC408D000CBD2E /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
 		C42E99A82CFC40C5000CBD2E /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		C4501DC82CF866E300D41FE3 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
@@ -84,7 +89,6 @@
 		C4C21E902CF4669E00B0FA86 /* CalculatorVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVMTests.swift; sourceTree = "<group>"; };
 		C4C21E962CF4669E00B0FA86 /* Calculator-CombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator-CombineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITests.swift; sourceTree = "<group>"; };
-		C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_CombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4C21EAA2CF4678B00B0FA86 /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		C4C21EB12CF472ED00B0FA86 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		C4C21EB32CF472F900B0FA86 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
@@ -122,12 +126,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C400EEC62D0571370018B4D5 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C400EEBE2D056F380018B4D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C42E99A72CFC4099000CBD2E /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 			children = (
 				C4ADA7C02CF72E460014C1F1 /* Tip.swift */,
 				C4501DCA2CF867B200D41FE3 /* Result.swift */,
+				C400EEB92D0569570018B4D5 /* ScreenIdentifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 				C4C21E8F2CF4669E00B0FA86 /* Calculator-CombineTests */,
 				C4C21E992CF4669E00B0FA86 /* Calculator-CombineUITests */,
 				C4C21E772CF4669900B0FA86 /* Products */,
+				C400EEBE2D056F380018B4D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				C4C21E9A2CF4669E00B0FA86 /* Calculator_CombineUITests.swift */,
-				C4C21E9C2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift */,
+				C400EEBB2D056AD40018B4D5 /* CalculatorScreen.swift */,
 			);
 			path = "Calculator-CombineUITests";
 			sourceTree = "<group>";
@@ -373,6 +387,9 @@
 				C4C21E982CF4669E00B0FA86 /* PBXTargetDependency */,
 			);
 			name = "Calculator-CombineUITests";
+			packageProductDependencies = (
+				C400EEC52D0571370018B4D5 /* CombineCocoa */,
+			);
 			productName = "Calculator-CombineUITests";
 			productReference = C4C21E962CF4669E00B0FA86 /* Calculator-CombineUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -465,6 +482,7 @@
 				C476604A2CF9DB5400A18DC3 /* Int+Extension.swift in Sources */,
 				C4C21EB22CF472ED00B0FA86 /* LogoView.swift in Sources */,
 				C4C21EC62CF48A0300B0FA86 /* ThemeColor.swift in Sources */,
+				C400EEBA2D0569570018B4D5 /* ScreenIdentifier.swift in Sources */,
 				C4ADA7C32CF73C450014C1F1 /* HeaderView.swift in Sources */,
 				C4501DCF2CF8926600D41FE3 /* UIResponder+Extension.swift in Sources */,
 				C4501DCD2CF8849B00D41FE3 /* String+Extension.swift in Sources */,
@@ -498,8 +516,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4C21E9D2CF4669E00B0FA86 /* Calculator_CombineUITestsLaunchTests.swift in Sources */,
 				C4C21E9B2CF4669E00B0FA86 /* Calculator_CombineUITests.swift in Sources */,
+				C400EEC72D0572180018B4D5 /* ScreenIdentifier.swift in Sources */,
+				C400EEBC2D056AD40018B4D5 /* CalculatorScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,12 +790,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5XZHHC4623;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.giraysengonul.Calculator-CombineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Calculator-Combine";
 			};
 			name = Debug;
@@ -789,12 +813,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5XZHHC4623;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.giraysengonul.Calculator-CombineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Calculator-Combine";
 			};
 			name = Release;
@@ -868,6 +897,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C400EEC52D0571370018B4D5 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C21EBE2CF4746900B0FA86 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
 		C4C21EBC2CF4742D00B0FA86 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4C21EBB2CF4742D00B0FA86 /* XCRemoteSwiftPackageReference "SnapKit" */;
